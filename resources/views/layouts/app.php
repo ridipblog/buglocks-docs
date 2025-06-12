@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,26 +11,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <link href="css/main.css" rel="stylesheet" />
-    <link href="css/sidebar.css" rel="stylesheet" /> 
-    <link href="css/media.css" rel="stylesheet" />
+    <link href="resources/css/main.css?version=<?= time();?>" rel="stylesheet" />
+    <link href="resources/css/sidebar.css?version=<?= time();?>" rel="stylesheet" />
+    <link href="resources/css/media.css?version=<?= time();?>" rel="stylesheet" />
 
     <!-- *** Install Sidebar *** -->
     <?php
-    include_once "sections/sidebar.php";
+    include_once "resources/views/sections/sidebar.php";
     ?>
 
     <!-- *** Install Body Content *** -->
     <div class="content">
-        <div class="container-fluid">
+        <div class="container-fluid page-content">
             <?= $content ?? '' ?>
         </div>
     </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <!-- *** Install Extra Js *** -->
-     <?= 
-     $extraJs ?? '';
-     ?>
+    <?=
+    $extraJs ?? '';
+    ?>
     </body>
 
 </html>

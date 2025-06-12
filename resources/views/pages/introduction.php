@@ -1,4 +1,12 @@
 <?php
+
+// require_once __DIR__ . '../../../../vendor/autoload.php';
+require_once  '../../../vendor/autoload.php';
+
+use App\Middleware\CSRFSecurity;
+
+$csrf_security=new CSRFSecurity();
+$csrf_security->validateCSRF();
 ?>
 <!-- Hero Section -->
 <div class="hero text-center shadow-sm">
