@@ -1,11 +1,24 @@
 @media (max-width: 768px) {
+     
+
       .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-      }
-      .content {
-        margin-left: 0;
-        padding: 1rem;
-      }
+    width: 60px;
+    padding: 1rem 0.5rem;
+  }
+
+  .btn-label {
+    display: none;
+  }
+
+  .nav-btn {
+    justify-content: center;
+  }
+
+  .content {
+    margin-left: 60px !important;
+  }
+
+  .sidebar-title {
+    display: none;
+  }
     }

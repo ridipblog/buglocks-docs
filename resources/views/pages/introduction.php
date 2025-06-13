@@ -1,13 +1,12 @@
 <?php
 
-// require_once __DIR__ . '../../../../vendor/autoload.php';
-require_once  '../../../vendor/autoload.php';
+// require_once  '../../../vendor/autoload.php';
 
-use App\Middleware\CSRFSecurity;
+// use App\Middleware\CSRFSecurity;
 
-$csrf_security=new CSRFSecurity();
-$csrf_security->validateCSRF();
-?>
+// $csrf_security=new CSRFSecurity();
+// $csrf_security->validateCSRF();
+// ?>
 <!-- Hero Section -->
 <div class="hero text-center shadow-sm">
     <h1 class="display-5 fw-bold">Welcome to BugLocks</h1>
@@ -38,12 +37,12 @@ $csrf_security->validateCSRF();
         </div>
     </div>
 
-    <div class="col-md-4">
+   <div class="col-md-4">
         <div class="card feature-card shadow-sm p-3">
             <div class="card-body">
-                <div class="feature-icon mb-3"><i class="bi bi-braces"></i></div>
-                <h5 class="card-title">Blade Directives</h5>
-                <p class="card-text">Use `@role`, `@permission`, and `@can` in your Blade templates for clean conditionals.</p>
+                <div class="feature-icon mb-3"><i class="bi bi-diagram-3"></i></div>
+                <h5 class="card-title">Simple DB Structure</h5>
+                <p class="card-text">Built-in tables for users, roles, and permissions that are ready to use with minimal setup.</p>
             </div>
         </div>
     </div>

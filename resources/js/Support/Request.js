@@ -4,7 +4,7 @@ class Request {
     }
     
     // *** Request Post Method ***
-    handlePost = async (api, postData = {}, isHTML = false) => {
+    _handlePost = async (api, postData = {}, isHTML = false) => {
         let self = this;
         await $.ajax({
             type: "post",
@@ -23,7 +23,7 @@ class Request {
     }
 
     // *** Request Get Method ***
-    handleGet = async (api, params = {}, isHTML = false) => {        
+    _handleGet = async (api, params = {}, isHTML = false) => {        
         let self = this;
         await $.ajax({
             type: "get",
