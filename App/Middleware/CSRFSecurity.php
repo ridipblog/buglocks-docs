@@ -21,10 +21,10 @@ class CSRFSecurity
         $client_token = $_SESSION['HTTP_X_CSRF_TOKEN'] ?? null;
         $server_token = $_SESSION['csrf_token'] ?? null;
 
-        if (!$client_token !== $server_token) {
-            http_response_code(403);
-            echo "CSRF token mismatch";
-            exit;
+        if ($client_token !== $server_token) {
+            // http_response_code(403);
+            require __DIR__. '../../../resources/views/pages/installation.php';
+            exit(1);
         }
     }
 }

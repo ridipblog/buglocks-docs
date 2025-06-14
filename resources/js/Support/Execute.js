@@ -1,47 +1,51 @@
-import Request from "./Request.js?t=Date.now()";
+// import { Router } from `./Traits/Router.js?v=${Date.now()}`;
+const {Router} =await import(`./Traits/Router.js?v=${Date.now()}`);
+
+const module = await import(`./Request.js?v=${Date.now()}`);
+const Request = module.default;
 
 class Execute extends Request {
     constructor() {
         super();
+        this.routePage = null;
+        this.exeResponse = {
+            fails: false,
+            message: null
+        };
     }
 
     // *** Render Page ***
     renderPage = async (currentState) => {
-        let routePage = currentState.val();
-        let route=window?.buglocks?.route ?? null;
-        if ((route !== null) &&(route!=="buglocks")) {
-            routePage = route;
+        this.routePage = currentState.val();
+        let route = window?.buglocks?.route ?? null;
+        if ((route !== null) && (route !== "buglocks")) {
+            this.routePage = route;
         }
-
-        // *** Re=define handleResponse Method ***
+        
+        // *** Re-define handleResponse Method ***
         this.handleResponse = async (response) => {
             $('.page-content').html(response);
         }
 
-        // *** Request By Get ***
-        await this._handleGet(`resources/views/pages/${routePage}.php`, {}, true);
+        try {
+            // *** Request By Get ***
+            await this._handleGet(`resources/views/pages/${this.routePage}.php`, {}, true)
 
-        let currentPath = window.location.pathname;
-        console.log(currentPath);
-        const pathParts = currentPath.split('/').filter(Boolean);
-        let lastRoute = pathParts.pop();
-        currentPath = '/' + pathParts.join('/');
+            //*** Navigate Page ***
+            // await this.navigatePage();
 
-        if (!currentPath.endsWith(`/${routePage}`)) {
-            const basePath = (lastRoute === 'buglocks')
-                ? `${currentPath}/${lastRoute}`
-                : `${currentPath}`;
-
-            const newPath = `${basePath}/${routePage}`;
-            // const newPath = `${basePath}/${routePage}`.replace(/\/+/g, '/');
-            history.pushState(null, '', newPath);
+            $('.nav-btn').removeClass('active');
+            $(`#${this.routePage}`).addClass('active');
+            window.buglocks.route = null;
+        } catch (error) {
+            this.exeResponse.fails = true;
+            this.exeResponse.message = "Problem in route";
         }
-
-        $('.nav-btn').removeClass('active');
-        $(`#${routePage}`).addClass('active');
-        window.buglocks.route = null;
 
     }
 }
+
+// *** Mix in Route Method in Execute ***
+Object.assign(Execute.prototype, Router);
 
 export default Execute;

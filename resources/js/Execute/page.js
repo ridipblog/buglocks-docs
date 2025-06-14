@@ -1,5 +1,6 @@
-
-import Execute from "../Support/execute.js?t=Date.now()";
+// import Execute from "../Support/execute.js?t=Date.now()";
+const module=await import(`../Support/execute.js?v=${Date.now()}`);
+const Execute=module.default;
 $(document).ready(function () {
     
     const exe = new Execute();
@@ -12,8 +13,7 @@ $(document).ready(function () {
             console.log(err);
         }
     });
-    
-    
+          
     // *** Run default for Introduction ***
     $('.nav-btn').first().trigger('click');
 });

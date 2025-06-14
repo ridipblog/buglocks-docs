@@ -6,7 +6,7 @@
 
 // $csrf_security=new CSRFSecurity();
 // $csrf_security->validateCSRF();
-// ?>
+?>
 <!-- Hero Section -->
 <div class="hero text-center shadow-sm">
     <h1 class="display-5 fw-bold">Welcome to BugLocks</h1>

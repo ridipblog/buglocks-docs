@@ -7,7 +7,7 @@ use App\Http\Request;
 $request=new Request();
 
 // *** Current Route Name ***
-$route=$request->route(); 
+$route=$request->route()->request_route; 
 
 $time=time();
 

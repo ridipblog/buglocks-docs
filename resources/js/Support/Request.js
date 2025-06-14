@@ -32,10 +32,9 @@ class Request {
             dataType: isHTML ? 'html' : 'json',
             success: function (response) {
                 self.handleResponse(response);
-
             },
-            error: function (error) {
-                console.log(error);
+            error: function (xhr, status, error) {
+                
             }
         });
     }
