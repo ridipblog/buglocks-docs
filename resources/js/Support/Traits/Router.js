@@ -1,5 +1,11 @@
 
 export const Router = {
+    routes: [
+        'buglocks', // If run on development server
+        'introduction',
+        'installation',
+        '404'
+    ],
 
     // *** navigate to Route ***
     async navigatePage() {
@@ -18,4 +24,16 @@ export const Router = {
             history.pushState(null, '', newPath);
         }
     },
+
+    // *** Validate Route ***
+    async isValidRoute(route=null) {
+        console.log("Error check 1");
+        console.log(this.routes);
+        console.log("sasasa",this.routePage)
+        console.log("checking 1",this.routes.includes(this.routePage));
+        if(!this.routes.includes(this.routePage)){
+            this.routePage='404';
+            console.log("Error check 2");
+        }
+    }
 };

@@ -17,11 +17,16 @@ class Execute extends Request {
     // *** Render Page ***
     renderPage = async (currentState) => {
         this.routePage = currentState.val();
+        console.log("Click 1",this.routePage);
         let route = window?.buglocks?.route ?? null;
         if ((route !== null) && (route !== "buglocks")) {
             this.routePage = route;
         }
-        
+
+        // *** Validate Route ***
+        await this.isValidRoute();
+        console.log("Click 2",this.routePage);
+
         // *** Re-define handleResponse Method ***
         this.handleResponse = async (response) => {
             $('.page-content').html(response);
@@ -29,10 +34,14 @@ class Execute extends Request {
 
         try {
             // *** Request By Get ***
-            await this._handleGet(`resources/views/pages/${this.routePage}.php`, {}, true)
+            await this._handleGet(`resources/views/pages/${this.routePage}.php`, {}, true);
+            
+            console.log("Click 3",this.routePage);
 
             //*** Navigate Page ***
-            // await this.navigatePage();
+            await this.navigatePage();
+
+            console.log("Clik 4",this.routePage);
 
             $('.nav-btn').removeClass('active');
             $(`#${this.routePage}`).addClass('active');

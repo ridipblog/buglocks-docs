@@ -13,6 +13,14 @@ $(document).ready(function () {
             console.log(err);
         }
     });
+
+    // $('.nav-btn').off('click').on('click',async function(){
+    //     try {
+    //         await exe.renderPage($(this));
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // });
           
     // *** Run default for Introduction ***
     $('.nav-btn').first().trigger('click');

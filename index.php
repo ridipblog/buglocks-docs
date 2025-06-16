@@ -6,9 +6,11 @@ use App\Http\Request;
 
 $request=new Request();
 
-// *** Current Route Name ***
-$route=$request->route()->request_route; 
+// *** Current Route Name With Check Valid Route ***
+$request->route()
+->isValidRoute(); 
 
+$route=$request->request_route;
 $time=time();
 
 // *** Set title ***
@@ -34,5 +36,4 @@ EOT;
 $extraJs=ob_get_clean();
 
 include_once  "resources/views/layouts/app.php";
-
 ?>

@@ -5,7 +5,7 @@
   <div class="nav-buttons">
     <button type="button" id="introduction" class="nav-btn" value="introduction"><i class="fas fa-book-open"></i> <span class="btn-label">Introduction</span></button>
     <button type="button" id="installation" class="nav-btn" value="installation"><i class="fas fa-download"></i> <span class="btn-label">Installation</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-cogs"></i> <span class="btn-label">Configuration</span></button>
+    <button type="button" class="nav-btn" value="sasa"><i class="fas fa-cogs"></i> <span class="btn-label">Configuration</span></button>
     <button type="button" class="nav-btn"><i class="fas fa-rocket"></i> <span class="btn-label">Getting Started</span></button>
     <button type="button" class="nav-btn"><i class="fas fa-code-branch"></i> <span class="btn-label">Routing</span></button>
     <button type="button" class="nav-btn"><i class="fas fa-user-shield"></i> <span class="btn-label">Authentication</span></button>

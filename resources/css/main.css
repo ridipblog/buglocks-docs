@@ -33,21 +33,41 @@ body {
 
 /* *** Installation Page ***  */
 .installation-page .text-gradient {
-    background: linear-gradient(45deg, #0d6efd, #6610f2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(45deg, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .installation-page .bg-gradient-primary {
-    background: linear-gradient(135deg, #0d6efd, #4f46e5);
+  background: linear-gradient(135deg, #0d6efd, #4f46e5);
 }
 
 .installation-page .card-header {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .installation-page pre code {
-    font-size: 0.95rem;
-    color: #1f2937;
-    font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: #1f2937;
+  font-family: 'Courier New', monospace;
+}
+
+/* *** 404 Page *** */
+.not-found-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.not-found-icon {
+  font-size: 5rem;
+  color: #dc3545;
+}
+
+.not-found-btn {
+  margin-top: 1.5rem;
 }
