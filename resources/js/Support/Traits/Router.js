@@ -1,9 +1,10 @@
 
 export const Router = {
     routes: [
-        'buglocks', // If run on development server
         'introduction',
         'installation',
+        'rolePermission',
+        'assignLocks',
         '404'
     ],
 

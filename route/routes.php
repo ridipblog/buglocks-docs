@@ -6,5 +6,7 @@ $routes=[
     'buglocks', // If run on development server
     'introduction',
     'installation',
-    '404'
+    'rolePermission',
+    'assignLocks',
+    '404',
 ];

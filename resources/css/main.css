@@ -71,3 +71,41 @@ body {
 .not-found-btn {
   margin-top: 1.5rem;
 }
+
+/* *** Role & Permission Page *** */
+.section-title {
+  border-left: 5px solid #0d6efd;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.example-box {
+  background-color: #fff;
+  border-left: 4px solid #198754;
+  padding: 15px;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.code-block {
+  background-color: #f1f1f1;
+  font-family: monospace;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+}
+
+/* *** Assign Locks Page *** */
+.code-block {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: monospace;
+}
+
+.info-box {
+  background-color: #e9f5ff;
+  padding: 15px;
+  border-left: 5px solid #0d6efd;
+  border-radius: 5px;
+}
