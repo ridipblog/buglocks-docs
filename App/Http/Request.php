@@ -17,7 +17,6 @@ class Request
     public function route()
     {
         $request_uri = $_SERVER['REQUEST_URI'];
-        $this->dd($request_uri);
         $request_path = parse_url($request_uri, PHP_URL_PATH);
         $segments = explode('/', trim($request_path, '/'));
         $this->request_route = end($segments);
