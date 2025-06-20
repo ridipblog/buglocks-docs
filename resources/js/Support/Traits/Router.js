@@ -5,6 +5,8 @@ export const Router = {
         'installation',
         'rolePermission',
         'assignLocks',
+        'authentication',
+        'pages',
         '404'
     ],
 

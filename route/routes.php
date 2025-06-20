@@ -8,5 +8,7 @@ $routes=[
     'installation',
     'rolePermission',
     'assignLocks',
+    'authentication',
+    'pages',
     '404',
 ];
