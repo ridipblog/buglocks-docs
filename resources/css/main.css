@@ -129,3 +129,35 @@ body {
   border-radius: 5px;
   font-family: monospace;
 }
+
+/* *** Main Loader *** */
+.rotating-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #0d6efd, #6f42c1);
+    border-radius: 12px;
+    animation: rotateBox 2s linear infinite;
+    margin: 100px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes rotateBox {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .main-load{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .hidden{
+    display: none;
+  }

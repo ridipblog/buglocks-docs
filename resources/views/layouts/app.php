@@ -15,15 +15,24 @@
     <link href="resources/css/sidebar.css?version=<?= time(); ?>" rel="stylesheet" />
     <link href="resources/css/media.css?version=<?= time(); ?>" rel="stylesheet" />
 
+<body >
     <!-- *** Install Sidebar *** -->
     <?php
     include_once "resources/views/sections/sidebar.php";
     ?>
 
     <!-- *** Install Body Content *** -->
-    <div class="content">
+    <div class="content main-content hidden">
         <div class="container-fluid page-content">
             <?= $content ?? '' ?>
+        </div>
+    </div>
+
+    <!-- *** Install Loader *** -->
+    <div class="content main-load">
+        <div class="container-fluid loader-container">
+            <div class="rotating-box"></div>
+
         </div>
     </div>
 
@@ -31,10 +40,11 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- *** Install Extra Js *** -->
+     
     <?=
     $extraJs ?? '';
     ?>
-    
-    </body>
+
+</body>
 
 </html>

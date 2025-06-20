@@ -9,17 +9,6 @@
     <button type="button" id="assignLocks" class="nav-btn" value="assignLocks"><i class="fas fa-check"></i> <span class="btn-label">Assign Locks</span></button>
     <button type="button" id="authentication" class="nav-btn" value="authentication"><i class="fas fa-user-shield"></i> <span class="btn-label">Authentication</span></button>
     <button type="button" id="pages" class="nav-btn" value="pages"><i class="fas fa-puzzle-piece"></i> <span class="btn-label">Blade Components</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-rocket"></i> <span class="btn-label">Getting Started</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-code-branch"></i> <span class="btn-label">Routing</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-database"></i> <span class="btn-label">Database</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-terminal"></i> <span class="btn-label">Commands</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-vial"></i> <span class="btn-label">Testing</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-upload"></i> <span class="btn-label">Publishing</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-code"></i> <span class="btn-label">Examples</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-bug"></i> <span class="btn-label">Troubleshooting</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-history"></i> <span class="btn-label">Changelog</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-users"></i> <span class="btn-label">Contributing</span></button>
-    <button type="button" class="nav-btn"><i class="fas fa-certificate"></i> <span class="btn-label">License</span></button>
   </div>
 </div>
 
